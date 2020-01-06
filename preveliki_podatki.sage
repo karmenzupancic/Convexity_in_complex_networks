@@ -1,6 +1,8 @@
 
 # coding: utf-8
 
+import json
+
 # In[1]:
 
 
@@ -39,7 +41,10 @@ G_m_sage3 = Graph(G_m3)
 # In[4]:
 
 
-convextion_of_convex_subsets_brez_izpisovanja(G_m_sage3)
+grafi3 = convextion_of_convex_subsets_brez_izpisovanja(G_m_sage3)
+print(len(grafi3))
+with open("grafi3.json", "w") as f:
+    json.dump([G.vertices() for G in grafi3], f)
 
 
 # In[2]:
@@ -54,5 +59,8 @@ G_m_sage4 = Graph(G_m4)
 # In[5]:
 
 
-convextion_of_convex_subsets_brez_izpisovanja(G_m_sage4)
+grafi4 = convextion_of_convex_subsets_brez_izpisovanja(G_m_sage4)
+print(len(grafi4))
+with open("grafi4.json", "w") as f:
+    json.dump([G.vertices() for G in grafi4], f)
 
